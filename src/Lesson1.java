@@ -1,3 +1,5 @@
+import org.joda.time.DateTime;
+
 import java.util.Date;
 import java.util.Scanner;
 //
@@ -9,12 +11,30 @@ import java.util.Scanner;
 public class Lesson1 {
 
       public static void main(String[] args){
-        Date date = new Date();
-        date = date.before();
-        System.out.println("введите свое имя"+date);
+        DateTime date = new DateTime();
+        int hour = date.getHourOfDay();
+        System.out.println("введите свое имя  "+hour);
         Scanner in = new Scanner(System.in);
-     //   String name =  in.next();
-        //System.out.println( "приветствую, " + name+date);
+        String name =  in.next();
+        System.out.println( greeting(hour)+ name);
 
     }
+
+    public static String greeting(int h){
+          String s = "";
+        if(h >= 5 && h <=9){
+           s = "Доброе утро, ";
+        }
+        if (h >= 10 && h <= 16){
+            s = "Добрый день, ";
+        }
+          if (h >= 17 && h <=23){
+              s =  "Добрый вечер, ";
+          }
+          if (h >= 0 && h <=4){
+              s =  "Доброй ночи, ";
+          }
+          return s;
+    }
 }
+
