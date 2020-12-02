@@ -19,9 +19,12 @@ public class lesson3 {
         System.out.println("количество символов " + str.length());
      //   System.out.println(str.replace(" ", ""));
         System.out.println(isEven(str));
-        System.out.println("количество символов без пробела " + getSize(str, N));
+        System.out.println("количество символов без учета пробелов " + getSize(str, N));
 
     }
+
+    
+
     public static int getSize(String text, int max)
     {
         if(text.length()>max){
