@@ -13,10 +13,10 @@ public class Lesson1 {
       public static void main(String[] args){
         DateTime date = new DateTime();
         int hour = date.getHourOfDay();
-        System.out.println("введите свое имя  "+hour);
+        System.out.println("введите свое имя  ");
         Scanner in = new Scanner(System.in);
         String name =  in.next();
-        System.out.println( greeting(hour)+ name);
+        System.out.println(greeting(hour)+ name);
 
     }
 
