@@ -26,9 +26,9 @@ public class HomeWork3 {
 
     public static void main(String[] args) {
         int rand = new Random().nextInt(10); //компьютер загадал случайное число от 0 до 9
-  //      System.out.println("нужно отгадать это число"+rand); //проверка числа
-         checkTheNumber(rand); //задание 1
-       //не понимаю, почему нельзя подряд запустить игры.
+        //      System.out.println("нужно отгадать это число"+rand); //проверка числа
+        checkTheNumber(rand); //задание 1
+        //не понимаю, почему нельзя подряд запустить игры.
         //guessWordGame(); //задание 2
 
     }
@@ -55,14 +55,17 @@ public class HomeWork3 {
         } else {
             System.out.println("попытки закончились");
         }
-
-        System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
-        int answer = sc.nextInt();
-        if (answer == 1){
+       int answer;
+        do{
+            System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+            answer = sc.nextInt();
+        }while(answer !=1 && answer != 0);
+        if(answer==1){
             int rand = new Random().nextInt(10);
             checkTheNumber(rand);
         }
     }
+
  /* 2   Создать массив из слов
     String[] words = {"apple", "orange", "lemon", "banana", "apricot", "avocado", "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi", "mango", "mushroom", "nut", "olive", "pea", "peanut",
     "pear", "pepper", "pineapple", "pumpkin", "potato"}.
@@ -83,14 +86,15 @@ public class HomeWork3 {
         return arr[rand];
     }
 
-    public static void guessWordGame(){
+    public static void guessWordGame() {
         String theWord = randomArray(words);
         System.out.printf("компьютер загадал одно из этих слов, угадайте, какое %s", Arrays.toString(words));
         System.out.println(theWord); //выводит слово, для самотестирования
         String trial;
-        do{
-        System.out.println("введите ваше слово ");
-         trial = sc.nextLine();}
+        do {
+            System.out.println("введите ваше слово ");
+            trial = sc.nextLine();
+        }
         while (!compareTheWords(theWord, trial));
     }
 

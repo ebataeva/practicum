@@ -92,8 +92,10 @@ public class homework {
             System.out.println("високосный");
         }else{
             System.out.println("невисокосный");
+            System.out.println();
         }
     }
+
 }
 
 

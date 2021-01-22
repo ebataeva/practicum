@@ -23,7 +23,7 @@ public class lesson3 {
 
     }
 
-    
+
 
     public static int getSize(String text, int max)
     {

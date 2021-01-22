@@ -49,7 +49,7 @@ import org.jsoup.nodes.Document;
 
 class lesson1Task2 {
     public static void main(String[] args) throws Exception {
-        String query = "https://timezoneapi.io/api/ip/?token=qIYUJabrWXhk";
+        String query = "https://timezoneapi.io";
 
         HttpURLConnection connection = null;
         try {
@@ -65,10 +65,10 @@ class lesson1Task2 {
                 BufferedReader in = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 
                 String line;
-//                if((line = in.readLine()) != null){
-//                    sb.append(line);
-//                    sb.append("\n");
-//                }
+                if((line = in.readLine()) != null){
+                    sb.append(line);
+                    sb.append("\n");
+                }
                 System.out.println(sb.toString());
             } else {
                 System.out.println("error: "+ connection.getResponseMessage() + "\n"+connection.getResponseMessage());
