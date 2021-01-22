@@ -59,7 +59,8 @@ public class HomeWork3 {
         System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
         int answer = sc.nextInt();
         if (answer == 1){
-            checkTheNumber(number);
+            int rand = new Random().nextInt(10);
+            checkTheNumber(rand);
         }
     }
  /* 2   Создать массив из слов
