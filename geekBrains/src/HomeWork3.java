@@ -27,9 +27,9 @@ public class HomeWork3 {
     public static void main(String[] args) {
         int rand = new Random().nextInt(10); //компьютер загадал случайное число от 0 до 9
   //      System.out.println("нужно отгадать это число"+rand); //проверка числа
-//         checkTheNumber(rand); //задание 1
+         checkTheNumber(rand); //задание 1
        //не понимаю, почему нельзя подряд запустить игры.
-        guessWordGame(); //задание 2
+        //guessWordGame(); //задание 2
 
     }
 
@@ -48,12 +48,18 @@ public class HomeWork3 {
                 System.out.printf("это число меньше, чем задумал компьтер у вас %d попыток \n", i);
             }
 
-
         } while (trial != number && i > 0);
         if (trial == number) {
+
             System.out.printf("вы угадали число c %d попыток!", 3 - i);
         } else {
             System.out.println("попытки закончились");
+        }
+
+        System.out.println("Повторить игру еще раз? 1 – да / 0 – нет");
+        int answer = sc.nextInt();
+        if (answer == 1){
+            checkTheNumber(number);
         }
     }
  /* 2   Создать массив из слов
